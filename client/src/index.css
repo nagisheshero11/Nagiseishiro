@@ -13,36 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
 }
 
-.intro {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.intro-content {
-  display: flex;
-  align-items: center;
-  gap: 64px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.intro-image img {
-  margin-left: 50px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
