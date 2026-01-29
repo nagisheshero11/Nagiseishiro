@@ -1,0 +1,51 @@
+.about {
+  padding: 20px 0 72px; 
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-text {
+  max-width: 720px;
+}
+
+
+.about-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+
+.about-text > p {
+  font-size: 0.70rem;
+  line-height: 1.45;
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 22px;
+}
+
+
+.main-about p {
+  font-size: 1.05rem;
+  line-height: 1.45;    
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 12px;  
+}
+
+
+/* .about-image {
+  width: 180px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 160px;
+  opacity: 0.8;
+} */
