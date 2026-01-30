@@ -14,7 +14,7 @@ function Intro() {
       {/* foreground content */}
       <div className="intro-container">
         <section className="intro-text">
-          <h1>Hey, I'm Hemanth 👋</h1>
+          <h1>Hey, I'm Nagi Seishiro 👋</h1>
           <p>
             I am just a mediocre guy who loves to do things I like and be happy
             with my life and wanna be a software engineer someday and want to belong in the life i wanted to live.
