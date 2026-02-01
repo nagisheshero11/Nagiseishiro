@@ -1,0 +1,107 @@
+.opinions {
+  padding: 72px 0 96px;
+}
+
+.opinions-container {
+  max-width: 560px;           /* MATCH other sections */
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* -------------------- */
+/* Header */
+/* -------------------- */
+
+.opinions-text {
+  margin-bottom: 48px;
+}
+
+.opinions-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.opinions-text p {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* -------------------- */
+/* Columns wrapper */
+/* -------------------- */
+
+.opinions-columns {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 56px;
+}
+
+/* Vertical divider — ONLY between columns */
+
+.opinions-columns::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  transform: translateX(-50%);
+}
+
+/* -------------------- */
+/* Individual column */
+/* -------------------- */
+
+.opinion-col {
+  padding: 0 12px;
+  text-align: center;
+}
+
+.opinion-col img {
+  width: 64px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.opinion-col h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* -------------------- */
+/* Lists */
+/* -------------------- */
+
+.opinion-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.opinion-col li {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.75);
+  margin-bottom: 8px;
+}
+
+/* -------------------- */
+/* Conclusion */
+/* -------------------- */
+
+.conclusion {
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.conclusion p {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.45);
+}

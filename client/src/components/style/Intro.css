@@ -9,8 +9,7 @@
 .intro-container {
   display: flex;
   align-items: center;
-
-  max-width: 850px;
+  max-width: 560px;
   margin: 0 auto;
   padding: 0 24px;
 

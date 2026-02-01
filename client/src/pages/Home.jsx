@@ -4,6 +4,7 @@ import LifeLately from '../components/LifeLately';
 import W_E from '../components/W_E'
 import Skills from  '../components/Skills';
 import Certifications from '../components/Certifications';
+import Opinios from '../components/Opinions';
 
 function Home(){
     return(
@@ -14,6 +15,7 @@ function Home(){
             <W_E />
             <Skills />
             <Certifications />
+            <Opinios />
         </>
     )
 }
