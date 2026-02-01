@@ -44,7 +44,7 @@ function W_E() {
 
             <div className="we-info">
               <h3>Narayana Junior College</h3>
-              <p>BIEAP · Marks 898/1000</p>
+              <p>MPC · Marks 898/1000</p>
             </div>
 
             <span className="we-time">2021 – 2023</span>
