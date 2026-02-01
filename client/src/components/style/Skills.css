@@ -11,7 +11,7 @@
 /* Headings */
 
 .skills-container h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -34,7 +34,7 @@
   padding: 8px 14px;
   border-radius: 999px;
 
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
 
   background: #f5f5f5;
