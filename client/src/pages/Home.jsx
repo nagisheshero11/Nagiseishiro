@@ -5,6 +5,7 @@ import W_E from '../components/W_E'
 import Skills from  '../components/Skills';
 import Certifications from '../components/Certifications';
 import Opinios from '../components/Opinions';
+import MusicStack from '../components/MusicStack/MusicStack'
 
 function Home(){
     return(
@@ -16,6 +17,7 @@ function Home(){
             <Skills />
             <Certifications />
             <Opinios />
+            <MusicStack />
         </>
     )
 }
