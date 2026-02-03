@@ -16,7 +16,6 @@ function MusicStack() {
     if (dragElem.current) dragElem.current.style.transition = "none";
   };
 
-  // load songs from db (allows future switching to async fetch)
   useEffect(() => {
     setSongs(songsData);
   }, []);
@@ -28,9 +27,9 @@ function MusicStack() {
     dragX.current = x - startX.current;
     const el = dragElem.current || e.currentTarget || e.target;
     if (el) {
-      const baseY = el.dataset?.offset || 0;
-      const baseScale = el.dataset?.scale || 1;
-      el.style.transform = `translateY(${baseY}px) scale(${baseScale}) translateX(${dragX.current}px) rotate(${dragX.current * 0.05}deg)`;
+      const baseX = parseFloat(el.dataset?.offset || 0);
+      const baseScale = parseFloat(el.dataset?.scale || 1);
+      el.style.transform = `translateX(${baseX + dragX.current}px) scale(${baseScale}) rotate(${dragX.current * 0.04}deg)`;
     }
   };
 
@@ -39,32 +38,33 @@ function MusicStack() {
     isDragging.current = false;
     const el = dragElem.current || e.currentTarget || e.target;
     const absX = Math.abs(dragX.current);
-    if (el) {
-      // restore transition for smooth snap/exit
-      el.style.transition = "transform 0.35s ease, box-shadow 0.35s ease";
-    }
 
     if (absX > 120) {
-      // swipe away with animation then rotate the card to the end
       const direction = dragX.current > 0 ? 1 : -1;
-      const baseY = el?.dataset?.offset || 0;
-      const baseScale = el?.dataset?.scale || 1;
-      if (el) el.style.transform = `translateY(${baseY}px) scale(${baseScale}) translateX(${direction * 1000}px) rotate(${direction * 30}deg)`;
-      // wait for animation then move the card to the end to create an infinite cycle
+      const baseX = parseFloat(el?.dataset?.offset || 0);
+      const baseScale = parseFloat(el?.dataset?.scale || 1);
+
+      if (el) {
+        el.style.transition = "transform 0.4s ease, opacity 0.4s ease";
+        el.style.transform = `translateX(${baseX + direction * 800}px) scale(${baseScale}) rotate(${direction * 20}deg)`;
+        el.style.opacity = "0";
+      }
       setTimeout(() => {
         setSongs((prev) => {
           if (prev.length === 0) return prev;
           const removed = prev[index];
           const rest = prev.filter((_, i) => i !== index);
+          if (el) el.style.opacity = "1";
           return [...rest, removed];
         });
       }, 300);
     } else {
-      // snap back to base transform
+   
       if (el) {
-        const baseY = el.dataset.offset || 0;
+        el.style.transition = "transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)";
+        const baseX = el.dataset.offset || 0;
         const baseScale = el.dataset.scale || 1;
-        el.style.transform = `translateY(${baseY}px) scale(${baseScale})`;
+        el.style.transform = `translateX(${baseX}px) scale(${baseScale})`;
       }
     }
 
@@ -77,18 +77,17 @@ function MusicStack() {
     isDragging.current = false;
     const el = dragElem.current || e.currentTarget || e.target;
     if (el) {
-      el.style.transition = "transform 0.35s ease, box-shadow 0.35s ease";
-      const baseY = el.dataset.offset || 0;
+      el.style.transition = "transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)";
+      const baseX = el.dataset.offset || 0;
       const baseScale = el.dataset.scale || 1;
-      el.style.transform = `translateY(${baseY}px) scale(${baseScale})`;
+      el.style.transform = `translateX(${baseX}px) scale(${baseScale})`;
     }
     dragX.current = 0;
     dragElem.current = null;
   };
 
-  // Autoplay: automatically swipe the top card at intervals and rotate it to the end
   const autoplayRef = useRef(null);
-  const AUTOPLAY_DELAY = 3000;
+  const AUTOPLAY_DELAY = 4000;
 
   useEffect(() => {
     clearInterval(autoplayRef.current);
@@ -97,17 +96,23 @@ function MusicStack() {
     autoplayRef.current = setInterval(() => {
       if (isDragging.current) return;
       const stack = document.querySelector(".music-stack");
-      const top = stack?.querySelector('.music-card[data-offset="0"]') || stack?.querySelector('.music-card');
+      // Top card has offset 0
+      const top = stack?.querySelector('.music-card[data-offset="0"]');
       if (!top) return;
-      top.style.transition = "transform 0.6s ease, box-shadow 0.35s ease";
-      const baseY = top.dataset.offset || 0;
-      const baseScale = top.dataset.scale || 1;
-      // swipe left automatically
-      top.style.transform = `translateY(${baseY}px) scale(${baseScale}) translateX(${-1000}px) rotate(${-30}deg)`;
+
+      top.style.transition = "transform 0.6s ease, opacity 0.6s ease";
+      const baseX = parseFloat(top.dataset.offset || 0);
+      const baseScale = parseFloat(top.dataset.scale || 1);
+
+      const flyX = 800;
+      top.style.transform = `translateX(${baseX + flyX}px) scale(${baseScale}) rotate(10deg)`;
+      top.style.opacity = "0";
+
       setTimeout(() => {
         setSongs((prev) => {
           if (prev.length === 0) return prev;
           const [first, ...rest] = prev;
+          if (top) top.style.opacity = "1";
           return [...rest, first];
         });
       }, 500);
@@ -118,39 +123,60 @@ function MusicStack() {
 
   return (
     <section className="music">
-      <h2>My Music</h2>
+      <div className="music-bg">
+        <img src="/m_icon1.png" className="music-icon m-icon-1" alt="" />
+        <img src="/m_icon2.png" className="music-icon m-icon-2" alt="" />
+        <img src="/m_icon3.png" className="music-icon m-icon-3" alt="" />
+        <img src="/m_icon4.png" className="music-icon m-icon-4" alt="" />
+      </div>
 
-      <div className="music-stack">
-        {songs.map((song, index) => {
-          const offset = index * 8;
-          const scale = 1 - index * 0.04;
+      <div className="music-container">
+        <h2>Music</h2>
+        <p>Music is everything to me idk if i can survive a week without it</p>
+        <div className="music-stack">
+          {songs.map((song, index) => {
+            const offset = index * 10;
+            const scale = 1 - index * 0.05;
+            if (index > 3) return null;
 
-          return (
-            <div
-              key={song.title}
-              className="music-card"
-              data-offset={offset}
-              data-scale={scale}
-              style={{
-                transform: `translateY(${offset}px) scale(${scale})`,
-                zIndex: songs.length - index,
-              }}
-              onMouseDown={handlePointerDown}
-              onMouseMove={handlePointerMove}
-              onMouseUp={(e) => handlePointerUp(e, index)}
-              onMouseLeave={handlePointerCancel}
-              onTouchStart={handlePointerDown}
-              onTouchMove={handlePointerMove}
-              onTouchEnd={(e) => handlePointerUp(e, index)}
-            >
-              <img src={song.cover} alt={song.title} />
-              <div className="info">
-                <h3>{song.title}</h3>
-                <p>{song.artist}</p>
+            return (
+              <div
+                key={song.title}
+                className="music-card"
+                data-offset={offset}
+                data-scale={scale}
+                style={{
+                  transform: `translateX(${offset}px) scale(${scale})`,
+                  zIndex: songs.length - index,
+                }}
+                onMouseDown={handlePointerDown}
+                onMouseMove={handlePointerMove}
+                onMouseUp={(e) => handlePointerUp(e, index)}
+                onMouseLeave={handlePointerCancel}
+                onTouchStart={handlePointerDown}
+                onTouchMove={handlePointerMove}
+                onTouchEnd={(e) => handlePointerUp(e, index)}
+              >
+                <img src={song.cover} alt={song.title} />
+                <div className="info">
+                  <h3>{song.title}</h3>
+                  <p>{song.artist}</p>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+
+        <div className="spotify-link">
+          <p>
+            These are some of my Top Songs Last Year
+            <br />
+            to see more, check out my spotify
+          </p>
+          <a href="https://open.spotify.com/user/31fazvark25z5pggqzdbyevfktzu?si=b14ab28fe2544ea7" target="_blank" rel="noopener noreferrer">
+            <img src="/spotify.png" alt="Spotify" />
+          </a>
+        </div>
       </div>
     </section>
   );

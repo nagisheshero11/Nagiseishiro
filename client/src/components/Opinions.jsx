@@ -7,7 +7,7 @@ function Opinions() {
 
         {/* Header */}
         <div className="opinions-text">
-          <h2>My Opinions</h2>
+          <h2>Opinions</h2>
           <p>Here are some of my likes and dislikes.</p>
         </div>
 

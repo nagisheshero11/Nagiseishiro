@@ -1,57 +1,221 @@
+/* Base Layout */
 .music {
-  padding: 120px 0 80px;
-  text-align: center;
+  padding: 0 0 100px;
+  position: relative;
+  /* Ensure absolute children are relative to this */
+  overflow: hidden;
+  /* Contain floating icons */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.music-container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 1;
+  /* Place content above icons */
+}
+
+/* Background Icons */
+.music-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* Critical: Allow clicks to pass through to cards */
+  z-index: 0;
+  overflow: hidden;
+}
+
+.music-icon {
+  position: absolute;
+  width: 440px;
+  /* Very subtle */
+  filter: grayscale(100%);
+  /* Optional: keep them neutral like intro */
+  animation: musicFloat 14s ease-in-out infinite;
+}
+
+/* Icon Positions */
+.m-icon-1 {
+  top: 19%;
+  left: 5%;
+  animation-duration: 12s;
+}
+
+.m-icon-2 {
+  top: 20%;
+  right: 1%;
+  animation-duration: 15s;
+}
+
+.m-icon-3 {
+  bottom: 25%;
+  left: -8%;
+  animation-duration: 18s;
+}
+
+.m-icon-4 {
+  bottom: 17%;
+  right: -5%;
+  animation-duration: 14s;
+}
+
+@keyframes musicFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
 }
 
 .music h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
+  font-size: 1.5rem;
+  /* Matches Skills section */
+  font-weight: 600;
+  margin-bottom: 8px;
+  /* Reduced from 20px to hold p close */
+  color: #000;
+  letter-spacing: -0.01em;
 }
 
+.music-container p {
+  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 40px;
+  /* Space before the stack */
+  line-height: 1.5;
+  max-width: 400px;
+  /* Prevent it from getting too wide if needed */
+}
+
+/* Stack Container */
 .music-stack {
   position: relative;
-  width: 280px;
-  height: 380px;
+  width: 100%;
+  max-width: 500px;
+  height: 460px;
+  /* Reduced from 480px to tighten gap */
+  /* Taller for comfort */
   margin: 0 auto;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Card Design */
 .music-card {
   position: absolute;
-  inset: 0;
-  background: white;
-  border-radius: 26px;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.18);
-  overflow: hidden;
-  cursor: grab;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+  width: 300px;
+  background: white;
+  border-radius: 28px;
+  /* Slightly rounder outer corner */
+  padding: 12px;
+  /* Inset padding for the "framed" look */
+
+  /* Premium smooth shadow */
+  box-shadow:
+    0 20px 40px -10px rgba(0, 0, 0, 0.1),
+    0 0 10px rgba(0, 0, 0, 0.02);
+
+  cursor: grab;
+  /* GPU acceleration & glitch prevention */
+  will-change: transform;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  user-select: none;
+  /* Fix: Prevent text selection glitch */
+  -webkit-user-select: none;
+
+  /* Initial transition settings */
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+  transform-origin: center bottom;
 }
 
 .music-card:active {
   cursor: grabbing;
-  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.25);
+  box-shadow:
+    0 20px 40px -12px rgba(0, 0, 0, 0.2);
 }
 
+/* Album Art - Inset & Rounded */
 .music-card img {
+  display: block;
   width: 100%;
-  height: 220px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  border-radius: 18px;
+  /* Inner radius matching the frame */
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* Subtle depth for the art itself */
 }
 
+/* Info Section */
 .music-card .info {
-  padding: 16px;
+  padding: 20px 8px 12px;
+  /* Adjusted padding since card has global padding */
   text-align: left;
 }
 
 .music-card h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
 }
 
 .music-card p {
-  margin-top: 6px;
-  font-size: 0.85rem;
-  color: #666;
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: #999;
+  font-weight: 500;
+}
+
+/* Spotify Link Section */
+.spotify-link {
+  margin-top: 12px;
+  /* Drastically reduced from 60px */
+  text-align: center;
+}
+
+.spotify-link p {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  max-width: 100%;
+  /* Override the 400px limit to ensure centering */
+}
+
+.spotify-link a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.spotify-link a:hover {
+  transform: scale(1.1);
+}
+
+.spotify-link img {
+  width: 50px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }

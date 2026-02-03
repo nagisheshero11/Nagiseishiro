@@ -1,9 +1,10 @@
 .opinions {
-  padding: 72px 0 96px;
+  padding: 72px 0 48px;
 }
 
 .opinions-container {
-  max-width: 560px;           /* MATCH other sections */
+  max-width: 560px;
+  /* MATCH other sections */
   margin: 0 auto;
   padding: 0 32px;
 }
@@ -62,9 +63,8 @@
 }
 
 .opinion-col img {
-  width: 64px;
-  margin-bottom: 10px;
-  opacity: 0.9;
+  width: 70px;
+  height: 90px;
 }
 
 .opinion-col h3 {

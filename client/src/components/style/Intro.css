@@ -44,20 +44,46 @@
 .bg-icon {
   position: absolute;
   width: 290px;
-  opacity: 1; 
-  filter: grayscale(100%);
+  opacity: 1;
   animation: float 16s ease-in-out infinite;
 }
 
 
-.icon-1 { top: 22%; left: 1%; animation-duration: 8s; }
-.icon-2 { top: 28%; right: 12%; animation-duration: 11s; }
-.icon-3 { bottom: 2%; left: 0.2%; animation-duration: 12s; }
-.icon-4 { bottom: 2%; right: 1%; animation-duration: 12s; }
+.icon-1 {
+  top: 22%;
+  left: 1%;
+  animation-duration: 8s;
+}
+
+.icon-2 {
+  top: 28%;
+  right: 12%;
+  animation-duration: 11s;
+}
+
+.icon-3 {
+  bottom: 2%;
+  left: 0.2%;
+  animation-duration: 12s;
+}
+
+.icon-4 {
+  bottom: 2%;
+  right: 1%;
+  animation-duration: 12s;
+}
 
 
 @keyframes float {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }

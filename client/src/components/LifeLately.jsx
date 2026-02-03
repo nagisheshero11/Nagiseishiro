@@ -9,7 +9,7 @@ function LifeLately() {
   return (
     <section className="life">
       <div className="life-header">
-        <h2>My Mind</h2>
+        <h2>Mind</h2>
       </div>
 
       <div className="life-viewport">
