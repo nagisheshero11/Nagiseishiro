@@ -96,7 +96,6 @@ function MusicStack() {
     autoplayRef.current = setInterval(() => {
       if (isDragging.current) return;
       const stack = document.querySelector(".music-stack");
-      // Top card has offset 0
       const top = stack?.querySelector('.music-card[data-offset="0"]');
       if (!top) return;
 

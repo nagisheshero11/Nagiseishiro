@@ -1,6 +1,8 @@
 /* Base Layout */
+/* Base Layout */
 .music {
-  padding: 0 0 100px;
+  padding: 0 0 40px;
+  /* Reduced from 100px to reduce section gap */
   position: relative;
   /* Ensure absolute children are relative to this */
   overflow: hidden;
