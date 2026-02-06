@@ -1,0 +1,87 @@
+/* [project]/components/style/Opinions.css [app-client] (css) */
+.opinions {
+  padding: 20px 0 48px;
+}
+
+.opinions-container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.opinions-text {
+  margin-bottom: 48px;
+}
+
+.opinions-text h2 {
+  margin-bottom: 6px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.opinions-text p {
+  color: #0009;
+  font-size: .9rem;
+}
+
+.opinions-columns {
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 56px;
+  display: grid;
+  position: relative;
+}
+
+.opinions-columns:after {
+  content: "";
+  background: #00000014;
+  width: 1px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.opinion-col {
+  text-align: center;
+  padding: 0 12px;
+}
+
+.opinion-col img {
+  width: 70px;
+  height: 90px;
+}
+
+.opinion-col h3 {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.opinion-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.opinion-col li {
+  color: #000000bf;
+  margin-bottom: 8px;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.conclusion {
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.conclusion p {
+  color: #00000073;
+  font-size: .75rem;
+  line-height: 1.4;
+}
+
+/*# sourceMappingURL=components_style_Opinions_css_bad6b30c._.single.css.map*/

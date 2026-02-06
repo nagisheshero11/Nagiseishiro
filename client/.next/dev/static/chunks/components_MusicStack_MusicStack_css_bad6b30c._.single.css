@@ -1,0 +1,186 @@
+/* [project]/components/MusicStack/MusicStack.css [app-client] (css) */
+.music {
+  padding: 0 0 40px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.music-container {
+  z-index: 1;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+}
+
+.music-bg {
+  pointer-events: none;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.music-icon {
+  filter: grayscale();
+  width: 440px;
+  animation: 14s ease-in-out infinite musicFloat;
+  position: absolute;
+}
+
+.m-icon-1 {
+  animation-duration: 12s;
+  top: 19%;
+  left: 5%;
+}
+
+.m-icon-2 {
+  animation-duration: 15s;
+  top: 20%;
+  right: 1%;
+}
+
+.m-icon-3 {
+  animation-duration: 18s;
+  bottom: 25%;
+  left: -8%;
+}
+
+.m-icon-4 {
+  animation-duration: 14s;
+  bottom: 17%;
+  right: -5%;
+}
+
+@keyframes musicFloat {
+  0% {
+    transform: translateY(0)rotate(0);
+  }
+
+  50% {
+    transform: translateY(-20px)rotate(5deg);
+  }
+
+  100% {
+    transform: translateY(0)rotate(0);
+  }
+}
+
+.music h2 {
+  color: #000;
+  letter-spacing: -.01em;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.music-container p {
+  color: #0009;
+  max-width: 400px;
+  margin-bottom: 40px;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.music-stack {
+  perspective: 1000px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: 460px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.music-card {
+  cursor: grab;
+  will-change: transform;
+  width: 300px;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+  transform-origin: bottom;
+  background: #fff;
+  border-radius: 28px;
+  margin: auto;
+  padding: 12px;
+  transition: transform .4s cubic-bezier(.25, 1, .5, 1), box-shadow .3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 20px 40px -10px #0000001a, 0 0 10px #00000005;
+}
+
+.music-card:active {
+  cursor: grabbing;
+  box-shadow: 0 20px 40px -12px #0003;
+}
+
+.music-card img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  pointer-events: none;
+  border-radius: 18px;
+  width: 100%;
+  display: block;
+  box-shadow: 0 4px 12px #00000014;
+}
+
+.music-card .info {
+  text-align: left;
+  padding: 20px 8px 12px;
+}
+
+.music-card h3 {
+  color: #000;
+  letter-spacing: -.015em;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.music-card p {
+  color: #999;
+  margin-top: 4px;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.spotify-link {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.spotify-link p {
+  color: #888;
+  max-width: 100%;
+  margin-bottom: 20px;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.spotify-link a {
+  transition: transform .2s;
+  display: inline-block;
+}
+
+.spotify-link a:hover {
+  transform: scale(1.1);
+}
+
+.spotify-link img {
+  width: 50px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/*# sourceMappingURL=components_MusicStack_MusicStack_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,70 @@
+/* [project]/components/style/SocialDock.css [app-client] (css) */
+.social-dock {
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(12px);
+  background: #fffc;
+  border: 1px solid #0000000d;
+  border-radius: 50px;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 20px;
+  transition: transform .3s, box-shadow .3s;
+  display: flex;
+  position: fixed;
+  bottom: 32px;
+  left: 32px;
+  box-shadow: 0 8px 32px #00000014;
+}
+
+.social-dock:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px #0000001f;
+}
+
+.dock-separator {
+  background: #0000001a;
+  width: 1px;
+  height: 24px;
+}
+
+.dock-item {
+  opacity: .7;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  transition: transform .2s cubic-bezier(.3, 1.4, .5, 1);
+  display: flex;
+}
+
+.dock-item img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.dock-item svg {
+  fill: #111;
+  width: 20px;
+  height: 20px;
+}
+
+.dock-item:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .social-dock {
+    padding: 10px 16px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-dock:hover {
+    transform: translateX(-50%)translateY(-2px);
+  }
+}
+
+/*# sourceMappingURL=components_style_SocialDock_css_bad6b30c._.single.css.map*/

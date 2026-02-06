@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/style/Skills.css"],"sourcesContent":[".skills {\n  padding: 0px 0 8px;\n}\n\n.skills-container {\n  max-width: 560px;\n  margin: 0 auto;\n  padding: 0 32px;\n}\n\n/* Headings */\n\n.skills-container h2 {\n  font-size: 1.5rem;\n  font-weight: 600;\n  margin-bottom: 20px;\n}\n\n.skills-sub {\n  margin-top: 48px;\n}\n\n/* Pills layout */\n\n.skills-list {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n\n/* Pill style */\n\n.skill-pill {\n  padding: 8px 14px;\n  border-radius: 999px;\n\n  font-size: 0.85rem;\n  font-weight: 500;\n\n  background: #ecebeb;\n  color: rgba(0, 0, 0, 0.85);\n\n  white-space: nowrap;\n}\n\n/* Slightly muted pills */\n\n.skill-pill.muted {\n  background: #ecebeb;\n  color: rgba(0, 0, 0, 0.65);\n}"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;;AAQA;;;;;;AAMA;;;;AAMA;;;;;;AAQA;;;;;;;;;;AAeA"}}]
+}

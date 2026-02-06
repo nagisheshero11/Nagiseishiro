@@ -1,0 +1,76 @@
+/* [project]/src/components/style/LifeLately.css [app-client] (css) */
+.life {
+  padding: 24px 0 8px;
+}
+
+.life-header {
+  max-width: 560px;
+  margin: 0 auto 48px;
+  padding: 0 32px;
+}
+
+.life-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.life-viewport {
+  height: 720px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(#0000 0%, #000 15% 85%, #0000 100%);
+  mask-image: linear-gradient(#0000 0%, #000 15% 85%, #0000 100%);
+}
+
+.life-columns {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+}
+
+.life-column {
+  will-change: transform;
+  flex-direction: column;
+  gap: 20px;
+  animation: 60s linear infinite scrollLoop;
+  display: flex;
+}
+
+.col-1 {
+  animation-duration: 70s;
+}
+
+.col-2 {
+  animation-duration: 62s;
+}
+
+.col-3 {
+  animation-duration: 66s;
+}
+
+.life-item {
+  border-radius: 14px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.life-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@keyframes scrollLoop {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-33.3333%);
+  }
+}
+
+/*# sourceMappingURL=src_components_style_LifeLately_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/style/W_E.css"],"sourcesContent":[".we {\n  padding: 24px 0 8px;\n}\n\n/* main container – same rhythm as About */\n\n.we-container {\n  max-width: 560px;\n  margin: 0 auto;\n  padding: 0 32px;\n}\n\n/* each block */\n\n.we-block {\n  margin-bottom: 56px;\n}\n\n.we-block h2 {\n  font-size: 1.5rem;\n  font-weight: 600;\n  margin-bottom: 28px;\n}\n\n/* individual item */\n\n.we-item {\n  display: grid;\n  grid-template-columns: 44px 1fr auto;\n  align-items: center;\n  gap: 16px;\n\n  margin-bottom: 24px;\n}\n\n/* logo */\n\n.we-item img {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  object-fit: contain;\n\n  background: #f4f4f4;\n}\n\n/* text */\n\n.we-info h3 {\n  font-size: 0.95rem;\n  font-weight: 600;\n  margin: 0;\n}\n\n.we-info p {\n  font-size: 0.9rem;\n  margin: 4px 0 0;\n  color: rgba(0, 0, 0, 0.65);\n}\n\n/* time (right aligned) */\n\n.we-time {\n  font-size: 0.85rem;\n  color: rgba(0, 0, 0, 0.5);\n  white-space: nowrap;\n}\n\n/* subtle spacing tweak for last item */\n\n.we-item:last-child {\n  margin-bottom: 0;\n}"],"names":[],"mappings":"AAAA;;;;AAMA;;;;;;AAQA;;;;AAIA;;;;;;AAQA;;;;;;;;AAWA;;;;;;;;AAWA;;;;;;AAMA;;;;;;AAQA;;;;;;AAQA"}}]
+}

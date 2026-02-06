@@ -1,0 +1,96 @@
+.life {
+  padding: 24px 0 8px;
+}
+
+
+
+.life-header {
+  max-width: 560px;
+  margin: 0 auto 48px;
+  padding: 0 32px;
+}
+
+.life-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+
+
+.life-viewport {
+  height: 720px;
+  overflow: hidden;
+
+  -webkit-mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%);
+  mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%);
+}
+
+
+
+.life-columns {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+
+
+.life-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  animation: scrollLoop 60s linear infinite;
+  will-change: transform;
+}
+
+
+
+.col-1 {
+  animation-duration: 70s;
+}
+
+.col-2 {
+  animation-duration: 62s;
+}
+
+.col-3 {
+  animation-duration: 66s;
+}
+
+
+.life-item {
+  height: 200px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.life-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+@keyframes scrollLoop {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-33.333333%);
+  }
+}

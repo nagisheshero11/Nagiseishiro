@@ -1,0 +1,78 @@
+/* Floating Dock Container */
+.social-dock {
+    position: fixed;
+    bottom: 32px;
+    left: 32px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Subtle border */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    /* Soft lift */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-dock:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+/* Dock Divider */
+.dock-separator {
+    width: 1px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Icons */
+.dock-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s cubic-bezier(0.3, 1.4, 0.5, 1);
+    opacity: 0.7;
+}
+
+.dock-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.dock-item svg {
+    width: 20px;
+    height: 20px;
+    fill: #111;
+    /* Default dark */
+}
+
+/* Hover States */
+.dock-item:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    /* Pop effect */
+}
+
+/* Responsive Hide/Adjust */
+@media (max-width: 768px) {
+    .social-dock {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        /* Centered on mobile */
+        padding: 10px 16px;
+    }
+
+    .social-dock:hover {
+        transform: translateX(-50%) translateY(-2px);
+    }
+}

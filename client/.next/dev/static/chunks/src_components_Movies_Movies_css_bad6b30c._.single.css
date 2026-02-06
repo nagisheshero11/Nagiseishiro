@@ -1,0 +1,181 @@
+/* [project]/src/components/Movies/Movies.css [app-client] (css) */
+.movies {
+  padding: 40px 0 80px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+.movies-container {
+  text-align: left;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.movies h2 {
+  color: #000;
+  letter-spacing: -.01em;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.movies p.movies-desc {
+  color: #0009;
+  margin-bottom: 40px;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.movies-scroll-wrapper {
+  -webkit-mask-image: linear-gradient(to right, #0000, #000 5% 95%, #0000);
+  mask-image: linear-gradient(to right, #0000, #000 5% 95%, #0000);
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, #0000, #000 15px calc(100% - 15px), #0000);
+}
+
+.movies-track {
+  gap: 24px;
+  width: max-content;
+  animation: 150s linear infinite scroll;
+  display: flex;
+}
+
+.movies-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.movie-card {
+  color: #fff;
+  background: #000;
+  border-radius: 20px;
+  flex-direction: column;
+  flex: none;
+  align-items: center;
+  width: 280px;
+  padding: 20px;
+  transition: transform .3s;
+  display: flex;
+  position: relative;
+  box-shadow: 0 10px 20px #0000001a;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-dots {
+  isolation: isolate;
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.dot {
+  mix-blend-mode: screen;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: -8px;
+}
+
+.dot:first-child {
+  margin-left: 0;
+}
+
+.dot.orange {
+  background-color: #ff8000;
+}
+
+.dot.green {
+  background-color: #00e054;
+}
+
+.dot.blue {
+  background-color: #40bcf4;
+}
+
+.movie-poster {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 12px #0006;
+}
+
+.movie-title {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .02em;
+  margin-bottom: 12px;
+  font-family: Impact, Arial Black, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.movie-director-label, .movie-staring-label {
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 2px;
+  font-size: .6rem;
+  font-weight: 600;
+}
+
+.movie-director {
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  margin-bottom: 8px;
+  font-size: .75rem;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.movie-staring {
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: .65rem;
+  line-height: 1.2;
+}
+
+.letterboxd-link {
+  text-align: center;
+  color: #0009;
+  margin-top: 60px;
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.letterboxd-link a {
+  margin-top: 16px;
+  transition: transform .2s;
+  display: block;
+}
+
+.letterboxd-link a:hover {
+  transform: scale(1.1);
+}
+
+.letterboxd-link img {
+  width: auto;
+  height: 32px;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=src_components_Movies_Movies_css_bad6b30c._.single.css.map*/

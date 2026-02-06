@@ -1,0 +1,1048 @@
+/* [project]/src/components/style/Intro.css [app-client] (css) */
+.intro {
+  align-items: center;
+  padding: 200px 0 8px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-container {
+  z-index: 1;
+  align-items: center;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  position: relative;
+}
+
+.intro-text p {
+  max-width: 520px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.intro-image img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  margin-left: 10px;
+}
+
+.intro-bg {
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.bg-icon {
+  opacity: 1;
+  width: 290px;
+  animation: 16s ease-in-out infinite float;
+  position: absolute;
+}
+
+.icon-1 {
+  animation-duration: 8s;
+  top: 22%;
+  left: 1%;
+}
+
+.icon-2 {
+  animation-duration: 11s;
+  top: 28%;
+  right: 12%;
+}
+
+.icon-3 {
+  animation-duration: 12s;
+  bottom: 2%;
+  left: .2%;
+}
+
+.icon-4 {
+  animation-duration: 12s;
+  bottom: 2%;
+  right: 1%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* [project]/src/components/style/About.css [app-client] (css) */
+.about {
+  padding: 24px 0 8px;
+}
+
+.about-container {
+  justify-content: center;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+}
+
+.about-text {
+  max-width: 560px;
+}
+
+.about-text h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.about-text > p {
+  color: #0000008c;
+  margin-bottom: 22px;
+  font-size: .7rem;
+  line-height: 1.45;
+}
+
+.main-about p {
+  color: #000c;
+  margin-bottom: 12px;
+  font-size: .95rem;
+  line-height: 1.45;
+}
+
+/* [project]/src/components/style/LifeLately.css [app-client] (css) */
+.life {
+  padding: 24px 0 8px;
+}
+
+.life-header {
+  max-width: 560px;
+  margin: 0 auto 48px;
+  padding: 0 32px;
+}
+
+.life-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.life-viewport {
+  height: 720px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(#0000 0%, #000 15% 85%, #0000 100%);
+  mask-image: linear-gradient(#0000 0%, #000 15% 85%, #0000 100%);
+}
+
+.life-columns {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+}
+
+.life-column {
+  will-change: transform;
+  flex-direction: column;
+  gap: 20px;
+  animation: 60s linear infinite scrollLoop;
+  display: flex;
+}
+
+.col-1 {
+  animation-duration: 70s;
+}
+
+.col-2 {
+  animation-duration: 62s;
+}
+
+.col-3 {
+  animation-duration: 66s;
+}
+
+.life-item {
+  border-radius: 14px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.life-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@keyframes scrollLoop {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-33.3333%);
+  }
+}
+
+/* [project]/src/components/style/W_E.css [app-client] (css) */
+.we {
+  padding: 24px 0 8px;
+}
+
+.we-container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.we-block {
+  margin-bottom: 56px;
+}
+
+.we-block h2 {
+  margin-bottom: 28px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.we-item {
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  display: grid;
+}
+
+.we-item img {
+  object-fit: contain;
+  background: #f4f4f4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.we-info h3 {
+  margin: 0;
+  font-size: .95rem;
+  font-weight: 600;
+}
+
+.we-info p {
+  color: #000000a6;
+  margin: 4px 0 0;
+  font-size: .9rem;
+}
+
+.we-time {
+  color: #00000080;
+  white-space: nowrap;
+  font-size: .85rem;
+}
+
+.we-item:last-child {
+  margin-bottom: 0;
+}
+
+/* [project]/src/components/style/Skills.css [app-client] (css) */
+.skills {
+  padding: 0 0 8px;
+}
+
+.skills-container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.skills-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.skills-sub {
+  margin-top: 48px;
+}
+
+.skills-list {
+  flex-wrap: wrap;
+  gap: 10px;
+  display: flex;
+}
+
+.skill-pill {
+  color: #000000d9;
+  white-space: nowrap;
+  background: #ecebeb;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+.skill-pill.muted {
+  color: #000000a6;
+  background: #ecebeb;
+}
+
+/* [project]/src/components/style/Certifications.css [app-client] (css) */
+.certs {
+  padding: 24px 0 8px;
+}
+
+.certs-container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.certs-container h2 {
+  margin-bottom: 28px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.cert-item {
+  grid-template-columns: 44px 1fr;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+  display: grid;
+}
+
+.cert-item img {
+  object-fit: contain;
+  background: #f4f4f4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.cert-info h3 {
+  margin: 0;
+  font-size: .95rem;
+  font-weight: 600;
+}
+
+.cert-info p {
+  color: #000000a6;
+  margin-top: 4px;
+  font-size: .9rem;
+}
+
+.cert-item:last-child {
+  margin-bottom: 0;
+}
+
+/* [project]/src/components/style/Opinions.css [app-client] (css) */
+.opinions {
+  padding: 20px 0 48px;
+}
+
+.opinions-container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.opinions-text {
+  margin-bottom: 48px;
+}
+
+.opinions-text h2 {
+  margin-bottom: 6px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.opinions-text p {
+  color: #0009;
+  font-size: .9rem;
+}
+
+.opinions-columns {
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 56px;
+  display: grid;
+  position: relative;
+}
+
+.opinions-columns:after {
+  content: "";
+  background: #00000014;
+  width: 1px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.opinion-col {
+  text-align: center;
+  padding: 0 12px;
+}
+
+.opinion-col img {
+  width: 70px;
+  height: 90px;
+}
+
+.opinion-col h3 {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.opinion-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.opinion-col li {
+  color: #000000bf;
+  margin-bottom: 8px;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.conclusion {
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.conclusion p {
+  color: #00000073;
+  font-size: .75rem;
+  line-height: 1.4;
+}
+
+/* [project]/src/components/MusicStack/MusicStack.css [app-client] (css) */
+.music {
+  padding: 0 0 40px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.music-container {
+  z-index: 1;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+}
+
+.music-bg {
+  pointer-events: none;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.music-icon {
+  filter: grayscale();
+  width: 440px;
+  animation: 14s ease-in-out infinite musicFloat;
+  position: absolute;
+}
+
+.m-icon-1 {
+  animation-duration: 12s;
+  top: 19%;
+  left: 5%;
+}
+
+.m-icon-2 {
+  animation-duration: 15s;
+  top: 20%;
+  right: 1%;
+}
+
+.m-icon-3 {
+  animation-duration: 18s;
+  bottom: 25%;
+  left: -8%;
+}
+
+.m-icon-4 {
+  animation-duration: 14s;
+  bottom: 17%;
+  right: -5%;
+}
+
+@keyframes musicFloat {
+  0% {
+    transform: translateY(0)rotate(0);
+  }
+
+  50% {
+    transform: translateY(-20px)rotate(5deg);
+  }
+
+  100% {
+    transform: translateY(0)rotate(0);
+  }
+}
+
+.music h2 {
+  color: #000;
+  letter-spacing: -.01em;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.music-container p {
+  color: #0009;
+  max-width: 400px;
+  margin-bottom: 40px;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.music-stack {
+  perspective: 1000px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: 460px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.music-card {
+  cursor: grab;
+  will-change: transform;
+  width: 300px;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+  transform-origin: bottom;
+  background: #fff;
+  border-radius: 28px;
+  margin: auto;
+  padding: 12px;
+  transition: transform .4s cubic-bezier(.25, 1, .5, 1), box-shadow .3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 20px 40px -10px #0000001a, 0 0 10px #00000005;
+}
+
+.music-card:active {
+  cursor: grabbing;
+  box-shadow: 0 20px 40px -12px #0003;
+}
+
+.music-card img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  pointer-events: none;
+  border-radius: 18px;
+  width: 100%;
+  display: block;
+  box-shadow: 0 4px 12px #00000014;
+}
+
+.music-card .info {
+  text-align: left;
+  padding: 20px 8px 12px;
+}
+
+.music-card h3 {
+  color: #000;
+  letter-spacing: -.015em;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.music-card p {
+  color: #999;
+  margin-top: 4px;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.spotify-link {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.spotify-link p {
+  color: #888;
+  max-width: 100%;
+  margin-bottom: 20px;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.spotify-link a {
+  transition: transform .2s;
+  display: inline-block;
+}
+
+.spotify-link a:hover {
+  transform: scale(1.1);
+}
+
+.spotify-link img {
+  width: 50px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* [project]/src/components/Movies/Movies.css [app-client] (css) */
+.movies {
+  padding: 40px 0 80px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+.movies-container {
+  text-align: left;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.movies h2 {
+  color: #000;
+  letter-spacing: -.01em;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.movies p.movies-desc {
+  color: #0009;
+  margin-bottom: 40px;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.movies-scroll-wrapper {
+  -webkit-mask-image: linear-gradient(to right, #0000, #000 5% 95%, #0000);
+  mask-image: linear-gradient(to right, #0000, #000 5% 95%, #0000);
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, #0000, #000 15px calc(100% - 15px), #0000);
+}
+
+.movies-track {
+  gap: 24px;
+  width: max-content;
+  animation: 150s linear infinite scroll;
+  display: flex;
+}
+
+.movies-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.movie-card {
+  color: #fff;
+  background: #000;
+  border-radius: 20px;
+  flex-direction: column;
+  flex: none;
+  align-items: center;
+  width: 280px;
+  padding: 20px;
+  transition: transform .3s;
+  display: flex;
+  position: relative;
+  box-shadow: 0 10px 20px #0000001a;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-dots {
+  isolation: isolate;
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.dot {
+  mix-blend-mode: screen;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: -8px;
+}
+
+.dot:first-child {
+  margin-left: 0;
+}
+
+.dot.orange {
+  background-color: #ff8000;
+}
+
+.dot.green {
+  background-color: #00e054;
+}
+
+.dot.blue {
+  background-color: #40bcf4;
+}
+
+.movie-poster {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 12px #0006;
+}
+
+.movie-title {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .02em;
+  margin-bottom: 12px;
+  font-family: Impact, Arial Black, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.movie-director-label, .movie-staring-label {
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 2px;
+  font-size: .6rem;
+  font-weight: 600;
+}
+
+.movie-director {
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  margin-bottom: 8px;
+  font-size: .75rem;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.movie-staring {
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: .65rem;
+  line-height: 1.2;
+}
+
+.letterboxd-link {
+  text-align: center;
+  color: #0009;
+  margin-top: 60px;
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.letterboxd-link a {
+  margin-top: 16px;
+  transition: transform .2s;
+  display: block;
+}
+
+.letterboxd-link a:hover {
+  transform: scale(1.1);
+}
+
+.letterboxd-link img {
+  width: auto;
+  height: 32px;
+  display: inline-block;
+}
+
+/* [project]/src/components/Projects/Projects.css [app-client] (css) */
+.studio {
+  z-index: 10;
+  background-color: #fff;
+  padding: 60px 32px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  position: relative;
+}
+
+.studio-container {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.studio-header {
+  border-bottom: 1px solid #0000000f;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+}
+
+.studio-header h2 {
+  color: #111;
+  letter-spacing: -.01em;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.project-list {
+  flex-direction: column;
+  display: flex;
+}
+
+.project-item {
+  cursor: pointer;
+  border-bottom: 1px solid #0000000d;
+  align-items: center;
+  padding: 16px 0;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-content {
+  width: 100%;
+  padding-right: 0;
+  transition: width .3s cubic-bezier(.2, .8, .2, 1);
+}
+
+.project-item:hover .project-content {
+  width: calc(100% - 50px);
+}
+
+.project-title {
+  color: #111;
+  letter-spacing: -.01em;
+  margin: 0 0 2px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.project-tech {
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: 4px;
+  font-size: .7rem;
+  font-weight: 500;
+}
+
+.project-desc {
+  color: #555;
+  max-width: 100%;
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.4;
+}
+
+.project-icon-wrapper {
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: transform .3s cubic-bezier(.2, .8, .2, 1);
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%)translateX(200%);
+}
+
+.project-item:hover .project-icon-wrapper {
+  transform: translateY(-50%)translateX(0);
+}
+
+.project-icon-wrapper img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  transition: transform .2s;
+}
+
+@media (max-width: 480px) {
+  .project-item:hover .project-content {
+    width: 100%;
+  }
+
+  .project-icon-wrapper {
+    display: none;
+  }
+}
+
+/* [project]/src/components/style/Footer.css [app-client] (css) */
+.footer {
+  background-color: #fff;
+  padding: 30px 32px 40px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.footer-bio {
+  border-bottom: 1px solid #0000000f;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-bio p {
+  color: #333;
+  margin: 0 0 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.footer-signature {
+  color: #111;
+  margin-top: 16px;
+  font-family: serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  display: block;
+}
+
+.footer-credits {
+  color: #999;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: .8rem;
+  display: flex;
+}
+
+.footer-credits a {
+  color: #111;
+  border-bottom: 1px solid #0000001a;
+  padding-bottom: 1px;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.footer-credits a:hover {
+  border-bottom-color: #111;
+}
+
+.footer-copyright {
+  color: #bbb;
+}
+
+@media (max-width: 480px) {
+  .footer-credits {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* [project]/src/components/style/SocialDock.css [app-client] (css) */
+.social-dock {
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(12px);
+  background: #fffc;
+  border: 1px solid #0000000d;
+  border-radius: 50px;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 20px;
+  transition: transform .3s, box-shadow .3s;
+  display: flex;
+  position: fixed;
+  bottom: 32px;
+  left: 32px;
+  box-shadow: 0 8px 32px #00000014;
+}
+
+.social-dock:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px #0000001f;
+}
+
+.dock-separator {
+  background: #0000001a;
+  width: 1px;
+  height: 24px;
+}
+
+.dock-item {
+  opacity: .7;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  transition: transform .2s cubic-bezier(.3, 1.4, .5, 1);
+  display: flex;
+}
+
+.dock-item img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.dock-item svg {
+  fill: #111;
+  width: 20px;
+  height: 20px;
+}
+
+.dock-item:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .social-dock {
+    padding: 10px 16px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-dock:hover {
+    transform: translateX(-50%)translateY(-2px);
+  }
+}
+
+/*# sourceMappingURL=src_components_64a1a5d9._.css.map*/

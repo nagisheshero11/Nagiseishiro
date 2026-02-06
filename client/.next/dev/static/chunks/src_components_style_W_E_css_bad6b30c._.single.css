@@ -1,0 +1,60 @@
+/* [project]/src/components/style/W_E.css [app-client] (css) */
+.we {
+  padding: 24px 0 8px;
+}
+
+.we-container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.we-block {
+  margin-bottom: 56px;
+}
+
+.we-block h2 {
+  margin-bottom: 28px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.we-item {
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  display: grid;
+}
+
+.we-item img {
+  object-fit: contain;
+  background: #f4f4f4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.we-info h3 {
+  margin: 0;
+  font-size: .95rem;
+  font-weight: 600;
+}
+
+.we-info p {
+  color: #000000a6;
+  margin: 4px 0 0;
+  font-size: .9rem;
+}
+
+.we-time {
+  color: #00000080;
+  white-space: nowrap;
+  font-size: .85rem;
+}
+
+.we-item:last-child {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=src_components_style_W_E_css_bad6b30c._.single.css.map*/

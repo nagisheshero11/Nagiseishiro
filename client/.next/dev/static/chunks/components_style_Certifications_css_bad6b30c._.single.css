@@ -1,0 +1,50 @@
+/* [project]/components/style/Certifications.css [app-client] (css) */
+.certs {
+  padding: 24px 0 8px;
+}
+
+.certs-container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.certs-container h2 {
+  margin-bottom: 28px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.cert-item {
+  grid-template-columns: 44px 1fr;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+  display: grid;
+}
+
+.cert-item img {
+  object-fit: contain;
+  background: #f4f4f4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.cert-info h3 {
+  margin: 0;
+  font-size: .95rem;
+  font-weight: 600;
+}
+
+.cert-info p {
+  color: #000000a6;
+  margin-top: 4px;
+  font-size: .9rem;
+}
+
+.cert-item:last-child {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=components_style_Certifications_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,38 @@
+/* [project]/src/components/style/About.css [app-client] (css) */
+.about {
+  padding: 24px 0 8px;
+}
+
+.about-container {
+  justify-content: center;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+}
+
+.about-text {
+  max-width: 560px;
+}
+
+.about-text h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.about-text > p {
+  color: #0000008c;
+  margin-bottom: 22px;
+  font-size: .7rem;
+  line-height: 1.45;
+}
+
+.main-about p {
+  color: #000c;
+  margin-bottom: 12px;
+  font-size: .95rem;
+  line-height: 1.45;
+}
+
+/*# sourceMappingURL=src_components_style_About_css_bad6b30c._.single.css.map*/

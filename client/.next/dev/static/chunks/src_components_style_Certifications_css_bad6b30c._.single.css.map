@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/style/Certifications.css"],"sourcesContent":[".certs {\n  padding: 24px 0 8px;\n}\n\n.certs-container {\n  max-width: 560px;\n  margin: 0 auto;\n  padding: 0 32px;\n}\n\n\n.certs-container h2 {\n  font-size: 1.5rem;\n  font-weight: 600;\n  margin-bottom: 28px;\n}\n\n/* Individual certification */\n\n.cert-item {\n  display: grid;\n  grid-template-columns: 44px 1fr;\n  gap: 16px;\n  align-items: center;\n\n  margin-bottom: 12px;\n}\n\n/* Logo */\n\n.cert-item img {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  object-fit: contain;\n  background: #f4f4f4;\n}\n\n/* Text */\n\n.cert-info h3 {\n  font-size: 0.95rem;\n  font-weight: 600;\n  margin: 0;\n}\n\n.cert-info p {\n  font-size: 0.9rem;\n  margin-top: 4px;\n  color: rgba(0, 0, 0, 0.65);\n}\n\n/* Remove spacing on last */\n\n.cert-item:last-child {\n  margin-bottom: 0;\n}"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;;AAOA;;;;;;AAQA;;;;;;;;AAWA;;;;;;;;AAUA;;;;;;AAMA;;;;;;AAQA"}}]
+}

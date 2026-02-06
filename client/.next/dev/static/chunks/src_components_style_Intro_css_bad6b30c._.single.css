@@ -1,0 +1,86 @@
+/* [project]/src/components/style/Intro.css [app-client] (css) */
+.intro {
+  align-items: center;
+  padding: 200px 0 8px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-container {
+  z-index: 1;
+  align-items: center;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  position: relative;
+}
+
+.intro-text p {
+  max-width: 520px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.intro-image img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  margin-left: 10px;
+}
+
+.intro-bg {
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.bg-icon {
+  opacity: 1;
+  width: 290px;
+  animation: 16s ease-in-out infinite float;
+  position: absolute;
+}
+
+.icon-1 {
+  animation-duration: 8s;
+  top: 22%;
+  left: 1%;
+}
+
+.icon-2 {
+  animation-duration: 11s;
+  top: 28%;
+  right: 12%;
+}
+
+.icon-3 {
+  animation-duration: 12s;
+  bottom: 2%;
+  left: .2%;
+}
+
+.icon-4 {
+  animation-duration: 12s;
+  bottom: 2%;
+  right: 1%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=src_components_style_Intro_css_bad6b30c._.single.css.map*/
