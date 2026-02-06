@@ -9,10 +9,12 @@ import MusicStack from '../components/MusicStack/MusicStack';
 import Movies from '../components/Movies/Movies';
 import Projects from '../components/Projects/Projects';
 import Footer from '../components/Footer';
+import SocialDock from '../components/SocialDock';
 
 function Home() {
     return (
         <>
+            <SocialDock />
             <Intro />
             <About />
             <LifeLately />
