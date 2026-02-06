@@ -8,6 +8,7 @@ import Opinios from '../components/Opinions';
 import MusicStack from '../components/MusicStack/MusicStack';
 import Movies from '../components/Movies/Movies';
 import Projects from '../components/Projects/Projects';
+import Footer from '../components/Footer';
 
 function Home() {
     return (
@@ -22,6 +23,7 @@ function Home() {
             <Opinios />
             <MusicStack />
             <Movies />
+            <Footer />
         </>
     )
 }
