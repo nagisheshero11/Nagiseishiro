@@ -15,8 +15,8 @@ function LifeLately() {
       <div className="life-viewport">
         <div className="life-columns">
           {columns.map((col, i) => (
-            <div className={`life-column col-${i}`} key={i}>
-              {[...col, ...col].map((src, idx) => (
+            <div className={`life-column col-${i + 1}`} key={i}>
+              {[...col, ...col, ...col].map((src, idx) => (
                 <div className="life-item" key={idx}>
                   <img src={src} alt="" />
                 </div>

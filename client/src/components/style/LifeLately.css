@@ -20,27 +20,23 @@
 .life-viewport {
   height: 720px;
   overflow: hidden;
-  
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 15%,
-    black 85%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 15%,
-    black 85%,
-    transparent 100%
-  );
+
+  -webkit-mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%);
+  mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%);
 }
 
 
 
 .life-columns {
-  max-width: 560px;        
+  max-width: 560px;
   margin: 0 auto;
   padding: 0 32px;
 
@@ -62,13 +58,21 @@
 
 
 
-.col-1 { animation-duration: 70s; }
-.col-2 { animation-duration: 62s; }
-.col-3 { animation-duration: 66s; }
+.col-1 {
+  animation-duration: 70s;
+}
+
+.col-2 {
+  animation-duration: 62s;
+}
+
+.col-3 {
+  animation-duration: 66s;
+}
 
 
 .life-item {
-  height: 200px;            
+  height: 200px;
   border-radius: 14px;
   overflow: hidden;
 }
@@ -85,7 +89,8 @@
   from {
     transform: translateY(0);
   }
+
   to {
-    transform: translateY(-50%);
+    transform: translateY(-33.333333%);
   }
 }
